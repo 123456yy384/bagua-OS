@@ -1,0 +1,20 @@
+[package]
+name = "bagua-os-kernel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 核心库（no_std 模式）
+bagua-os = { path = "..", default-features = false, features = ["no_std"] }
+# 自旋锁
+spin = "0.9"
+# x86_64 特定操作（端口 IO、MSR 等）
+x86_64 = "0.15"
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+opt-level = "s"
+lto = true

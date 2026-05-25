@@ -1,0 +1,27 @@
+[package]
+name = "bagua-os"
+version = "0.1.0"
+edition = "2021"
+description = "八卦架构操作系统内核 — 极性驱动动态阻抗调度系统"
+
+[[bin]]
+name = "bagua-os"
+path = "src/main.rs"
+
+[[bin]]
+name = "bagua-os-boot"
+path = "src/boot.rs"
+required-features = ["no_std"]
+
+[features]
+# 裸机内核模式（禁用 std）
+no_std = []
+
+[dependencies]
+bitflags = "2"
+heapless = "0.8"
+libm = "0.2"
+
+[profile.release]
+opt-level = 2
+lto = true
