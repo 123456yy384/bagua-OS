@@ -1,5 +1,5 @@
 # bagua-OS
-bagua OS (Used to prove that the scope of application of the gossip architecture is not limited to AI)
+bagua OS (Used to prove that BaGua Architecture's scope of application is not limited to AI)
 # BaGua OS
 
 An **x86_64 operating system kernel built from scratch**, powered by the BaGua Architecture — a polarity-driven dynamic impedance scheduling system.
